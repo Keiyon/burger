@@ -1,0 +1,22 @@
+<h1> Eat-Da-Veggie-Burger!!</h1>
+
+<h2> Eat a burger yo! </h2>
+
+<ul>
+    {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burgers-block eaten=true}}
+        {{/unless}}
+    {{/each}}
+</ul>
+
+<h2> Consumed burger YO!</h2>
+
+<ul>
+    {{#each burgers}}
+        {{#if devoured}}
+            {{> burgers/burgers-block eaten=false}}
+        {{/if}}
+    {{/each}}
+    
+</ul>
