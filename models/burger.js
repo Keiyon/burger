@@ -6,13 +6,19 @@ var burgers1 = {
             cb(res);
         });
     },
+
+insertOne: function(cols, vals, cb) {
+  orm.create("burger1", cols, vals, function(res) {
+     cb(res);
+});
+},
+
+updateOne: function(objColVals, cond, cb) {
+
+    orm.updateOne("burger1", objColVals, cond, function(res) {
+        cb(res);
+    });
+} 
 };
-               
-
-
-
-// insertOne: function(cols, vals, )
-// updateOne:
-//};
 
 module.exports = burgers1;
